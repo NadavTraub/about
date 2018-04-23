@@ -2,6 +2,7 @@ const request = require('request');
 const fs = require('fs');
 const http = require('http');
 
+const null_func = () => { };
 const url = 'http://www.markdowntopdf.com/';
 
 md2pdf(`${__dirname}/README.md`);
@@ -12,6 +13,7 @@ function md2pdf(md) {
     console.log(`Converting '${md}' to '${pdf}'`);
 
     let mdFile = fs.createReadStream(md);
+
     request
         // Request
         .post({
@@ -19,39 +21,22 @@ function md2pdf(md) {
             formData: {
                 'file': mdFile,
             }
-        }, response)
+        }, null_func /* The code creates and sends a body parameter only if a callback was sent in `.post()` */)
+        // Logs
+        .on('error', err => console.error(`could not convert(${err})`))
+        // Flow
+        .on(/* clean: */ 'complete', _ => mdFile.close()) // Clean
         .on('complete', (res, body) => {
-            mdFile.close()
-        })
-        // Error
-        .on('error', err => console.error(`could not convert, (${err})`))
-        // Response
-        ;
-        /* // TODO: .on('response', res => {
-            let data = JSON.parse(res.body);
+            let data = JSON.parse(body);
             let pdfFile = fs.createWriteStream(pdf);
+
             http
-                .get(`${url}/app/download/${data.foldername}/${data.urlfilename}`, (res) => {
-                    res.pipe(pdfFile);
-                })
-                .on('close', () => pdfFile.close())
+                .get(`${url}/app/download/${data.foldername}/${data.urlfilename}`)
                 // Logs
                 .on('close', () => console.log('converted'))
-                .on('error', err => console.error(`could not convert, (${JSON.stringify(err)})`));
-        });*/
-    
-    function response(err, res, body) {
-        if (err) return;
-
-        let data = JSON.parse(res.body);
-        let pdfFile = fs.createWriteStream(pdf);
-        http
-            .get(`${url}/app/download/${data.foldername}/${data.urlfilename}`, (res) => {
-                res.pipe(pdfFile);
-            })
-            .on('close', () => pdfFile.close())
-            // Logs
-            .on('close', () => console.log('converted'))
-            .on('error', err => console.error(`could not convert, (${JSON.stringify(err)})`));
-    }
+                .on('error', err => console.error(`could not convert, (${JSON.stringify(err)})`))
+                // Flow
+                .on(/* clean: */ 'close', () => pdfFile.close())
+                .on('response', res => res.pipe(pdfFile));
+        });
 }
