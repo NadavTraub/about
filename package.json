@@ -1,4 +1,6 @@
 {
+    "name": "about",
+    "version": "n/a",
     "dependencies": {
         "request": "2.85.0"
     }
