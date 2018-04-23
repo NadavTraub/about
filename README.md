@@ -1,7 +1,7 @@
 # Ido Sorozon
 > phone: 053-339-1151<br />
 > mail: idobez@gmail.com<br />
-> linkedin: www.linkedin.com/in/idosu<br />
+> linkedin: linkedin.com/in/idosu<br />
 > about: github.com/idosu/about
 
 
@@ -23,7 +23,7 @@
 > main topics: outdated `Visual Basic`, basic `Assembler`, `C` using `C++` librarries but without using `class`es, `C#`, `SQL`(`Oracle`), `Java`
 
 ### Sep 2013-Jul 2015 *developer*
-> Wroked to fix a main project that had performance issues, also upgraded the `Java` standart librarry from 4 to 7, added tests, added `Ant`+`Ivy` for processes like `JAXB` compilation running tests and building the kit to be installed
+> Fixed a main project that had performance issues, upgraded the `Java` standart librarry from 4 to 7, added tests, added `Ant`+`Ivy` for processes like `JAXB`, compilation, running tests and building kits
 
 ### Jul 2015-Aug 2016 *senior developer & consultant*
 > Added CI+CD process for all the projects in our organization using `jenkins`, `java`, `ant` and alot of `windows batch` and `linux bash` scripts.
