@@ -1,7 +1,8 @@
 # Ido Sorozon
-> phone: 053-339-1151<br/>
-> mail: idobez@gmail.com<br/>
-> linkedin: www.linkedin.com/in/idosu
+> phone: 053-339-1151<br />
+> mail: idobez@gmail.com<br />
+> linkedin: www.linkedin.com/in/idosu<br />
+> about: github.com/idosu/about
 
 
 ## Skill Highlights
@@ -11,6 +12,7 @@
 - **Java build and dependency resolution**: `Ant+Ivy`, `Gradle`
 - **Shell scripting**: excelent in *nix `bash` shell scripting and windows `batch`
 - **CI/D**: Worked on CI/D processes using `Jenkins` and `docker`
+- **Regular Expression**: You can't spell shell scripting without regex
 <!-- // TODO PHP -->
 
 ## Work Experience
