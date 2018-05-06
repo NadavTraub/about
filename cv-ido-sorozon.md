@@ -22,7 +22,8 @@
 > MAAT Engineer
 
 ## Army service
-> 5.5 years of Army service as a software developer at IAF's software unit, Ofek
+> 5.5 years of Army service as a software developer at IAF's software unit, Ofek.<br />
+> Release rank is 'Sergeant Major'
 
 ## Work Experience
 ### Aug 2016-Apr 2018 *senior developer & consultant*, Ofek IDF
