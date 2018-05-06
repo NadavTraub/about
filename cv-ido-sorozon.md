@@ -6,7 +6,7 @@
 
 
 ## Skill Highlights
-- **Java**: main traits: `reflection`(with generics), java8 `streams`, `multithreading`
+- **Java**: main traits: `reflection`(with annotations and generics), java8 `streams`, `multithreading`
 - **Java libraries**: e.g. `Spring Framework`, `JPA`(`Hibernate`), `lombok`(getters, setters and more), `Log4j`
 - **Java unit tests**: `JUnit`, `Mockito`
 - **Java build and dependency resolution**: `Ant+Ivy`, `Gradle`
